@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Pencarian</title>
+</head>
+<body>
+    <h2>Hasil pencarian untuk: "{{ keyword }}"</h2>
+    {% if results %}
+        <ul>
+        {% for r in results %}
+            <li>{{ r }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Tidak ditemukan hasil.</p>
+    {% endif %}
+    <a href="/">Kembali</a>
+</body>
+</html>
